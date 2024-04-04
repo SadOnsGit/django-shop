@@ -2,14 +2,20 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-def testpage(request):
-    return render(request, 'mytestapp/index.html')
+def about(request):
+    context = {
+        'title': 'О нас',
+        'footer': 'Template footer',
+        'content': 'Страница о нас',
+        'page_text': 'Мы работаем с 2008 года'
+    }
+    return render(request, 'mytestapp/about.html', context=context)
 
 def index(request):
     context = {
-        'title': 'Home',
-        'content': 'Главная страница магазина',
-        'list': [4, 'second']
+        'title': 'Главная',
+        'footer': 'Template footer',
+        'content': 'Главная страница магазина'
     }
     
     return render(request, 'mytestapp/index.html', context=context)

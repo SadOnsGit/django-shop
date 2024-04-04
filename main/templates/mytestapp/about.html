@@ -1,0 +1,15 @@
+{% extends "mytestapp/base.html" %}
+
+{% block content %}
+<div class="col-lg-10">
+    <!-- Контент на странице -->
+    <div class="container my-5">
+        <div class="p-5 text-center bg-body-tertiary rounded-3">
+          <h1 class="text-body-emphasis">{{ content }}</h1>
+          <p class="lead">
+            {{ page_text }}
+          </p>
+        </div>
+      </div>
+</div>
+{% endblock %}

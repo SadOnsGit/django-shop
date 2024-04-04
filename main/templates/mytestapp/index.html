@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-</head>
-<body>
-    <div class="p">{{ content }}</div>
-    <div class="p">{{ list.0 }}</div>
-    {% if list.0 > 5 %}
-    <div class="p">Лист больше 5</div>
-    {% endif %}
-</body>
-</html>
+{% extends 'mytestapp/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
+{% endblock %}
+
+{% block content %}
+<div class="col-lg-10">
+    <!-- Контент на странице -->
+    <h1 class="mt-5 pt-5"><strong>{{ content }}</strong></h1>
+</div>
+{% endblock %}
