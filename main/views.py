@@ -5,7 +5,6 @@ from django.shortcuts import render
 def about(request):
     context = {
         'title': 'О нас',
-        'footer': 'Template footer',
         'content': 'Страница о нас',
         'page_text': 'Мы работаем с 2008 года'
     }
@@ -14,7 +13,6 @@ def about(request):
 def index(request):
     context = {
         'title': 'Главная',
-        'footer': 'Template footer',
         'content': 'Главная страница магазина'
     }
     
